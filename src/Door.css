@@ -1,24 +1,53 @@
 .door-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw; /* 화면 전체 너비 */
-  overflow: hidden; /* 혹시 넘치는 부분 숨김 */
   background-color: #000;
 }
 
 .door-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 이미지가 화면에 꽉 차게 */
+  object-fit: cover;
   cursor: pointer;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease;
+}
+
+.door-image.zoomed {
+  transform: scale(1.5) translateY(-10%);
+}
+
+.light-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.light-overlay.active {
+  opacity: 0.4;
 }
 
 @media (max-width: 768px) {
   .door-image {
     width: 100%;
     height: 100%;
+  }
+
+  .door-image.zoomed {
+    transform: scale(1.2) translateY(-5%);
+  }
+
+  .light-overlay.active {
+    opacity: 0.3;
   }
 }
