@@ -1,0 +1,25 @@
+.door-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 화면 전체 */
+  background-color: #000; /* 필요에 따라 배경색 */
+}
+
+.door-image {
+  width: 50%; /* PC 기본 */
+  max-width: 400px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.door-image:hover {
+  transform: scale(1.05);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .door-image {
+    width: 80%;
+  }
+}
