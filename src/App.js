@@ -6,9 +6,9 @@ const Door = () => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [isLight, setIsLight] = useState(false);
 
-  const handleDoorClick = () => {
+  const handleKnockClick = () => {
     if (!isOpen) {
-      setIsOpen(true); // 문 열림
+      setIsOpen(true); // 버튼 클릭으로 문 열림
     }
   };
 
@@ -27,11 +27,11 @@ const Door = () => {
       <img
         src={isOpen ? "/images/door-open.JPG" : "/images/door-closed.JPG"}
         className={`door-image ${isZoomed ? "zoomed" : ""}`}
-        onClick={handleDoorClick}
+        alt="door"
       />
       
       {!isOpen && (
-        <button className="knock-button" onClick={handleDoorClick}>
+        <button className="knock-button" onClick={handleKnockClick}>
           노크하기
         </button>
       )}
