@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./Door.css"; // CSS 파일에 반응형 스타일 포함
 
-function App() {
+const Door = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleDoorClick = () => {
+    setIsOpen(true); // 클릭하면 문 열림 상태로 전환
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="door-container">
+      <img
+        src={isOpen ? "/images/door-open.png" : "/images/door-closed.png"}
+        alt="Door"
+        className="door-image"
+        onClick={handleDoorClick}
+      />
     </div>
   );
-}
+};
 
-export default App;
+export default Door;
