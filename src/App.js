@@ -1,21 +1,28 @@
 import React, { useState } from "react";
-import "./Door.css"; // CSS 파일에 반응형 스타일 포함
+import "./Door.css";
 
 const Door = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [isLight, setIsLight] = useState(false);
 
   const handleDoorClick = () => {
-    setIsOpen(true); // 클릭하면 문 열림 상태로 전환
+    if (!isOpen) {
+      setIsOpen(true);
+    } else {
+      setIsZoomed(true);
+      setIsLight(true);
+    }
   };
 
   return (
     <div className="door-container">
       <img
-        src={isOpen ? "/images/door-open.JPG" : "/images/door-closed.JPG"}
-        alt="Door"
-        className="door-image"
+        src={isOpen ? "/images/door-open.png" : "/images/door-closed.png"}
+        className={`door-image ${isZoomed ? "zoomed" : ""}`}
         onClick={handleDoorClick}
       />
+      <div className={`light-overlay ${isLight ? "active" : ""}`} />
     </div>
   );
 };
