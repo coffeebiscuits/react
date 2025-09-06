@@ -11,7 +11,7 @@ const Door = () => {
   return (
     <div className="door-container">
       <img
-        src={isOpen ? "/images/door-open.jpg" : "/images/door-closed.jpg"}
+        src={isOpen ? "/images/door-open.JPG" : "/images/door-closed.JPG"}
         alt="Door"
         className="door-image"
         onClick={handleDoorClick}
