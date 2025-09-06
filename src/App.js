@@ -14,11 +14,10 @@ const Door = () => {
 
   useEffect(() => {
     if (isOpen) {
-      // 문 열리면 바로 확대 + 흰빛 레이어
       const timer = setTimeout(() => {
         setIsZoomed(true);
         setIsLight(true);
-      }, 300); // 문 열림 애니메이션 후 잠깐 지연 가능
+      }, 300);
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
@@ -30,6 +29,13 @@ const Door = () => {
         className={`door-image ${isZoomed ? "zoomed" : ""}`}
         onClick={handleDoorClick}
       />
+      
+      {!isOpen && (
+        <button className="knock-button" onClick={handleDoorClick}>
+          노크하기
+        </button>
+      )}
+
       <div className={`light-overlay ${isLight ? "active" : ""}`} />
     </div>
   );
