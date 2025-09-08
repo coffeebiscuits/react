@@ -6,7 +6,7 @@ const Character = () => {
 
   useEffect(() => {
     const fetchStream = async () => {
-      const response = await fetch("http://localhost:8000/llm-stream"); // LLM 백엔드 스트리밍 엔드포인트
+      const response = await fetch("https://port-0-working-task-madmcado69392982.sel4.cloudtype.app/greeting/stream"); // LLM 백엔드 스트리밍 엔드포인트
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
 
