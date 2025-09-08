@@ -10,8 +10,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: auto;
+  width: auto;
+  height: 100vh;
 }
 
 /* 말풍선 플로팅 */
