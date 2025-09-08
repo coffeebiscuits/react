@@ -14,7 +14,15 @@
   height: 100vh;
   object-fit: cover;
 }
-  
+
+/* PC 전용: 세로 브라우저 높이에 맞추고 가로는 비율대로 */
+@media (min-width: 769px) {
+  .character {
+    width: auto;
+    height: 100vh;
+  }
+}
+
 /* 말풍선 플로팅 */
 .speech-bubble {
   position: absolute;
