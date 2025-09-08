@@ -1,48 +1,17 @@
-import React, { useState, useEffect } from "react";
-import "./Door.css";
-import Character from "./Character";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Door from "./Door";
+import CharacterPage from "./CharacterPage";
 
-const Door = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isZoomed, setIsZoomed] = useState(false);
-  const [isLight, setIsLight] = useState(false);
-
-  const handleKnockClick = () => {
-    if (!isOpen) {
-      setIsOpen(true); // 버튼 클릭으로 문 열림
-    }
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      const timer = setTimeout(() => {
-        setIsZoomed(true);
-        setIsLight(true);
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-  }, [isOpen]);
-
+function App() {
   return (
-    <div className="door-container">
-      <img
-        src={isOpen ? "/images/door-open.JPG" : "/images/door-closed.JPG"}
-        className={`door-image ${isZoomed ? "zoomed" : ""}`}
-        alt="door"
-      />
-      
-      {!isOpen && (
-        <button className="knock-button" onClick={handleKnockClick}>
-          노크하기
-        </button>
-      )}
-
-      <div className={`light-overlay ${isLight ? "active" : ""}`} />
-
-      {/* 문 열림 + 확대 완료 후 캐릭터 등장 */}
-      {isZoomed && <Character />}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Door />} />
+        <Route path="/character" element={<CharacterPage />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
-export default Door;
+export default App;
