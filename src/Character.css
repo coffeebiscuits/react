@@ -11,12 +11,13 @@
   height: auto;
 }
 
-.typing-text {
+.speech-bubble {
   margin-top: 10px;
   font-size: 1.2rem;
   color: white;
 }
 
+/* 커서 깜빡임 */
 .cursor {
   display: inline-block;
   animation: blink 1s step-start infinite;
@@ -32,7 +33,7 @@
     width: 100px;
   }
 
-  .typing-text {
+  .speech-bubble {
     font-size: 1rem;
   }
 }
