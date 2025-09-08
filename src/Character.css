@@ -1,0 +1,38 @@
+.character-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.character {
+  width: 150px;
+  height: auto;
+}
+
+.typing-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .character {
+    width: 100px;
+  }
+
+  .typing-text {
+    font-size: 1rem;
+  }
+}
