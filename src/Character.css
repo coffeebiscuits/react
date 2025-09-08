@@ -1,31 +1,28 @@
+/* 화면 전체를 덮는 캐릭터 컨테이너 */
 .character-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 캐릭터 이미지 전체 화면 */
+.character {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면 전체 덮기 */
+}
+
+/* 말풍선 플로팅 */
+.speech-bubble {
   position: absolute;
-  bottom: 10%;
+  bottom: 10%; /* 화면 전체에서 아래쪽에서 띄우기 */
   left: 50%;
   transform: translateX(-50%);
-  text-align: center;
-}
-
-.character {
-  width: 100vw;    /* 화면 전체 너비 */
-  height: 100vh;   /* 화면 전체 높이 */
-  object-fit: contain; /* 비율 유지하면서 화면에 맞춤 */
-}
-
-.speech-bubble {
-  margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
-}
-
-/* 커서 깜빡임 */
-.cursor {
-  display: inline-block;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 플로팅 */
+  padding: 10px 20px;
+  border-radius: 12px;
 }
 
 /* 모바일 대응 */
@@ -36,6 +33,7 @@
   }
 
   .speech-bubble {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding: 8px 16px;
   }
 }
