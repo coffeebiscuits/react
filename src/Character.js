@@ -34,7 +34,7 @@ const Character = () => {
         className="character"
       />
       <div className="speech-bubble">
-        <p>{text}<span className="cursor">|</span></p>
+        <p>{text}</p>
       </div>
     </div>
   );
