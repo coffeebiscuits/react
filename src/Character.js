@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Character.css";
 
-const Character = () => {
+const CharacterPage = () => {
   const [text, setText] = useState("");
 
   useEffect(() => {
