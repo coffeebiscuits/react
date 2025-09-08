@@ -3,6 +3,7 @@ import "./Character.css";
 
 const Character = () => {
   const [text, setText] = useState("");
+  const [loading, setLoading] = useState(true); // LLM 답변 대기 상태
 
   useEffect(() => {
     const fetchStream = async () => {
@@ -20,6 +21,8 @@ const Character = () => {
         }
       } catch (err) {
         console.error("스트리밍 에러:", err);
+      } finally {
+        setLoading(false); // 스트리밍 종료 시 로딩 해제
       }
     };
 
@@ -34,7 +37,13 @@ const Character = () => {
         className="character"
       />
       <div className="speech-bubble">
-        <p>{text}</p>
+        {loading ? (
+          <p className="typing-dots">
+            <span>.</span><span>.</span><span>.</span>
+          </p>
+        ) : (
+          <p>{text}</p>
+        )}
       </div>
     </div>
   );
