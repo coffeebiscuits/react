@@ -43,3 +43,24 @@
     box-sizing: border-box; /* 패딩 포함해서 너비 계산 */
   }
 }
+
+/* 타이핑 점(dot) 애니메이션 */
+.typing-dots {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.typing-dots span {
+  display: inline-block;
+  animation: bounce 1.4s infinite;
+  margin-right: 2px;
+}
+
+.typing-dots span:nth-child(1) { animation-delay: 0s; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
