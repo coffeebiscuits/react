@@ -7,8 +7,9 @@
 }
 
 .character {
-  width: 150px;
-  height: auto;
+  width: 100vw;    /* 화면 전체 너비 */
+  height: 100vh;   /* 화면 전체 높이 */
+  object-fit: contain; /* 비율 유지하면서 화면에 맞춤 */
 }
 
 .speech-bubble {
@@ -30,7 +31,8 @@
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .character {
-    width: 100px;
+    width: 100vw;
+    height: 100vh;
   }
 
   .speech-bubble {
