@@ -39,7 +39,8 @@ const Door = () => {
 
       <div className={`light-overlay ${isLight ? "active" : ""}`} />
 
-      {showCharacter && <Character />}   {/* ✅ 캐릭터 표시 */}
+      {/* 문 열림 + 확대 완료 후 캐릭터 등장 */}
+      {isZoomed && <Character />}
     </div>
   );
 };
