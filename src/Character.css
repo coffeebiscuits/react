@@ -8,8 +8,9 @@
 /* 캐릭터 이미지 전체 화면 */
 .character {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: auto;
   height: 100vh;
 }
