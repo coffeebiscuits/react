@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Door.css";
+import Character from "./Character";
 
 const Door = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +38,8 @@ const Door = () => {
       )}
 
       <div className={`light-overlay ${isLight ? "active" : ""}`} />
+
+      {showCharacter && <Character />}   {/* ✅ 캐릭터 표시 */}
     </div>
   );
 };
