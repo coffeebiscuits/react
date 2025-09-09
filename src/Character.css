@@ -72,11 +72,10 @@
     font-family: 'Yanolja', sans-serif;
     font-size: 1.1rem;
     padding: 8px 16px;
-    width: 90%;            /* 너비 90%로 확장 */
-    max-width: 500px;       /* 최대 너비 제한 */
-    box-sizing: border-box; /* 패딩 포함해서 너비 계산 */
+    width: 90%;
+    max-width: 500px;
+    box-sizing: border-box;
   }
-}
 
   .center-button {
     padding: 10px 20px;
