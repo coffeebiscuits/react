@@ -6,13 +6,15 @@
   font-display: swap;
 }
 
-/* 화면 전체를 덮는 캐릭터 컨테이너 */
-.character-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: #964B00; /* 이미지 옆으로 보일 색 */
-}
+/* 화면 전체를 덮는 컨테이너 */
+.character-container { 
+  position: relative; 
+  width: 100vw; 
+  height: 100vh; 
+  background-image: url('/images/background_logo.png'); /* 이미지 경로 넣기 */ 
+  background-size: cover; /* 화면 가득 채우기 */ 
+  background-position: center; 
+  background-repeat: no-repeat; }
 
 /* 캐릭터 이미지 화면 */
 .character {
