@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Character.css";
-import mainImg from '../public/images/main.png'; // public/images 안에 이미지
 
 const Character = () => {
   const [text, setText] = useState("");
@@ -33,7 +32,7 @@ const Character = () => {
   return (
     <div
       className="character-container"
-      style={{ backgroundImage: `url(${mainImg})` }}
+      style={{ backgroundImage: 'url(/images/main.png)' }}
     >
       <div className="speech-bubble">
         {loading ? (
