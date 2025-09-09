@@ -1,11 +1,18 @@
-/* 화면 전체를 덮는 캐릭터 컨테이너 (배경이미지) */
+/* 화면 전체를 덮는 캐릭터 컨테이너 */
 .character-container {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+/* 캐릭터 이미지 전체 화면 */
+.character {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100vh;
 }
 
 /* 말풍선 플로팅 */
@@ -23,6 +30,11 @@
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
+  .character {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .speech-bubble {
     font-size: 1.1rem;
     padding: 8px 16px;
