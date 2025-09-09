@@ -32,7 +32,7 @@ const Character = () => {
   return (
     <div className="character-container">
       <img
-        src="/images/character.png"
+        src="/images/main.png"
         alt="character"
         className="character"
       />
