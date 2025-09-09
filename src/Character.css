@@ -19,7 +19,7 @@
 /* 말풍선 플로팅 */
 .speech-bubble {
   position: absolute;
-  bottom: 10%; /* 화면 전체에서 아래쪽에서 띄우기 */
+  bottom: 20%; /* 화면 전체에서 아래쪽에서 띄우기 */
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
