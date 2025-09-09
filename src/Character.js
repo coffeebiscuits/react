@@ -3,7 +3,7 @@ import "./Character.css";
 
 const Character = () => {
   const [text, setText] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // LLM 답변 대기 상태
 
   useEffect(() => {
     const fetchStream = async () => {
@@ -17,12 +17,12 @@ const Character = () => {
           if (done) break;
 
           const char = decoder.decode(value, { stream: true });
-          setText(prev => prev + char);
+          setText(prev => prev + char); // 한 글자씩 이어 붙이기
         }
       } catch (err) {
         console.error("스트리밍 에러:", err);
       } finally {
-        setLoading(false);
+        setLoading(false); // 스트리밍 종료 시 로딩 해제
       }
     };
 
@@ -30,10 +30,12 @@ const Character = () => {
   }, []);
 
   return (
-    <div
-      className="character-container"
-      style={{ backgroundImage: 'url(/images/main.png)' }}
-    >
+    <div className="character-container">
+      <img
+        src="/images/main.png"
+        alt="character"
+        className="character"
+      />
       <div className="speech-bubble">
         {loading ? (
           <p className="typing-dots">
