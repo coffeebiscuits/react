@@ -24,6 +24,7 @@
   transform: translate(-50%, -50%);
   width: auto;
   height: 100vh;
+  border-radius: 20px;  /* 모서리만 둥글게 */
 }
 
 /* 말풍선 플로팅 */
