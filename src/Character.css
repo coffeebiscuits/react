@@ -78,6 +78,12 @@
   }
 }
 
+  .center-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
 /* 타이핑 점(dot) 애니메이션 */
 .typing-dots {
   display: inline-block;
