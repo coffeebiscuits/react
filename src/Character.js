@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // 추가
 import "./Character.css";
 
 const Character = () => {
   const [text, setText] = useState("");
-  const [loading, setLoading] = useState(true); // LLM 답변 대기 상태
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // 추가
 
   useEffect(() => {
     const fetchStream = async () => {
@@ -17,17 +19,21 @@ const Character = () => {
           if (done) break;
 
           const char = decoder.decode(value, { stream: true });
-          setText(prev => prev + char); // 한 글자씩 이어 붙이기
+          setText(prev => prev + char);
         }
       } catch (err) {
         console.error("스트리밍 에러:", err);
       } finally {
-        setLoading(false); // 스트리밍 종료 시 로딩 해제
+        setLoading(false);
       }
     };
 
     fetchStream();
   }, []);
+
+  const handleClick = () => {
+    navigate("/home"); // 버튼 클릭 시 이동
+  };
 
   return (
     <div className="character-container">
@@ -45,6 +51,12 @@ const Character = () => {
           <p>{text}</p>
         )}
       </div>
+
+      {!loading && (
+        <button className="center-button" onClick={handleClick}>
+          다음
+        </button>
+      )}
     </div>
   );
 };
