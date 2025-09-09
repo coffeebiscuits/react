@@ -1,3 +1,11 @@
+/* CSS 최상단에 폰트 선언 */
+@font-face {
+  font-family: 'Yanolja';
+  src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YanoljaYacheR.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
 /* 화면 전체를 덮는 캐릭터 컨테이너 */
 .character-container {
   position: relative;
@@ -18,6 +26,7 @@
 
 /* 말풍선 플로팅 */
 .speech-bubble {
+  font-family: 'Yanolja', sans-serif;
   position: absolute;
   bottom: 20%; /* 화면 전체에서 아래쪽에서 띄우기 */
   left: 50%;
@@ -37,6 +46,7 @@
   }
 
   .speech-bubble {
+    font-family: 'Yanolja', sans-serif;
     font-size: 1.1rem;
     padding: 8px 16px;
     width: 90%;            /* 너비 90%로 확장 */
