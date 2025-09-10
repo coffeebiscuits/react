@@ -36,7 +36,7 @@
 }
 
 .envelope {
-  width: 500px;  /* 원하는 크기 */
+  width: 300px;  /* 원하는 크기 */
   height: auto;  /* 비율 유지 */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
