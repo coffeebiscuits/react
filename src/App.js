@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Character from "./Character";
+import Home from "./home";
 
 const Door = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Door />} />
         <Route path="/character" element={<Character />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );
