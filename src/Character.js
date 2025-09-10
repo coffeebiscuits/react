@@ -6,7 +6,8 @@ import Home from "./home";
 const Character = () => {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // 추가
+  const navigate = useNavigate();
+  const [showHome, setShowHome] = useState(false);
 
   useEffect(() => {
     const fetchStream = async () => {
