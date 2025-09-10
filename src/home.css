@@ -56,24 +56,54 @@
   z-index: 10;
 }
 
+/* 큐레이션 카드 */
 .curation-card {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(0);
+  animation: popUp 0.5s forwards; /* 등장 애니메이션 */
+  width: 300px;
+  z-index: 10;
 }
 
-.card-close-button {
+/* 카드 내부 이미지 */
+.curation-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* 카드 닫기 버튼 */
+.close-card {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(255,255,255,0.8);
+  top: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.5);
   border: none;
+  color: white;
+  font-size: 1.2rem;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
-  font-weight: bold;
+  z-index: 11;
+}
+
+/* 카드 등장 애니메이션 */
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -60%) scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-50%, -55%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 /* 모바일 대응 */
