@@ -31,16 +31,13 @@ const Home = () => {
         style={{ cursor: "pointer", marginTop: "20px" }}
       />
 
+      {/* 큐레이션 카드 */}
       {showCard && (
-        <div className="card-container">
-          <img
-            src="/images/curation_card_white.png"
-            alt="큐레이션 카드"
-            className="curation-card"
-          />
-          <button className="card-close-button" onClick={handleCardClose}>
-            X
+        <div className="curation-card">
+          <button className="close-card" onClick={handleCloseCard}>
+            ×
           </button>
+          <img src="/images/curation_card.png" alt="큐레이션 카드" />
         </div>
       )}
     </div>
