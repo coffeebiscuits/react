@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+mport React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 추가
 import "./Character.css";
 
