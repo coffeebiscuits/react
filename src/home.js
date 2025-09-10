@@ -7,7 +7,11 @@ const Home = () => {
 
   const handleClick = () => {
     setIsOpened(true);
-    setShowCard(true);
+
+    // 봉투 열리고 0.5초 후에 카드 등장
+    setTimeout(() => {
+      setShowCard(true);
+    }, 500);
   };
   
   const handleCardClose = () => {
