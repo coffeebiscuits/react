@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "./Character.css";
-import Home from "./home";
 
 const Character = () => {
   const [text, setText] = useState("");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const [showHome, setShowHome] = useState(false);
 
   useEffect(() => {
     const fetchStream = async () => {
@@ -36,9 +34,7 @@ const Character = () => {
   const handleClick = () => {
     navigate("/home"); // 버튼 클릭 시 이동
   };
-  
-  if (showHome) return <Home />;
-    
+      
   return (
     <div className="character-container">
       <img
