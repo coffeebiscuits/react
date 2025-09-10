@@ -39,13 +39,11 @@
   width: 300px;  /* 원하는 크기 */
   height: auto;  /* 비율 유지 */
   transition: transform 0.3s ease, opacity 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
 }
 
 .envelope:hover {
   transform: scale(1.1);
   opacity: 0.9;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
 /* 모바일 대응 */
