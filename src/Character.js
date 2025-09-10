@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // 추가
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "./Character.css";
 import Home from "./home";
 
