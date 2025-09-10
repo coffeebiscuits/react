@@ -35,7 +35,9 @@ const Character = () => {
   const handleClick = () => {
     navigate("/home"); // 버튼 클릭 시 이동
   };
-
+  
+  if (showHome) return <Home />;
+    
   return (
     <div className="character-container">
       <img
