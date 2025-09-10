@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 추가
 import "./Character.css";
-import home from "./home";
+import Home from "./home";
 
 const Character = () => {
   const [text, setText] = useState("");
