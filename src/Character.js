@@ -74,4 +74,15 @@ const Character = () => {
   );
 };
 
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Character />} />
+        <Route path="/character" element={<home />} />
+      </Routes>
+    </Router>
+  );
+};
+
 export default Character;
