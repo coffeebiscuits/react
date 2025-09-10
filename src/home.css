@@ -63,7 +63,8 @@
   left: 50%;
   transform: translate(-50%, -60%) scale(0);
   animation: popUp 0.5s forwards; /* 등장 애니메이션 */
-  width: 300px;
+  width: 50%;       /* 화면 가로의 50% */
+  max-width: 600px; /* 최대값 제한 */
   z-index: 10;
 }
 
