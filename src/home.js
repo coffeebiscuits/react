@@ -17,7 +17,7 @@ const Home = () => {
         alt="편지봉투"
         className="envelope"
         onClick={handleClick}
-        style={{ cursor: "pointer", width: "150px", marginTop: "20px" }}
+        style={{ cursor: "pointer", marginTop: "20px" }}
       />
     </div>
   );
