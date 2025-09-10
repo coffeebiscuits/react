@@ -35,6 +35,15 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
+.envelope {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.envelope:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .home-container h1 {
@@ -45,5 +54,9 @@
     font-size: 1.2rem;
     text-align: center;
     padding: 0 20px;
+  }
+
+  .envelope {
+    width: 120px;
   }
 }
