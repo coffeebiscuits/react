@@ -36,7 +36,7 @@
 }
 
 .envelope {
-  width: 1000px;  /* 원하는 크기 */
+  width: 500px;  /* 원하는 크기 */
   height: auto;  /* 비율 유지 */
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -59,6 +59,6 @@
   }
 
   .envelope {
-    width: 500px;
+    width: 200px;
   }
 }
