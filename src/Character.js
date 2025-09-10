@@ -44,16 +44,18 @@ const Character = () => {
       />
       <div className="speech-bubble">
         {loading ? (
-          <p 
-            className="typing-dots">
+          <div
+            className="typing-dots"
             style={{
-              display: 'flex',
-              justifyContent: 'center',
-              margin: 0
+              display: "flex",
+              justifyContent: "center",
+              margin: 0,
             }}
           >
-            <span>.</span><span>.</span><span>.</span>
-          </p>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </div>
         ) : (
           <p>{text}</p>
         )}
