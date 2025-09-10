@@ -37,7 +37,7 @@ const Home = () => {
           <button className="close-card" onClick={handleCloseCard}>
             ×
           </button>
-          <img src="/images/curation_card.png" alt="큐레이션 카드" />
+          <img src="/images/curation_card_white.png" alt="큐레이션 카드" />
         </div>
       )}
     </div>
