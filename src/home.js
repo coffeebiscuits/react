@@ -30,7 +30,7 @@ const Home = () => {
       {showCard && (
         <div className="card-container">
           <img
-            src="/images/curation_card.png"
+            src="/images/curation_card_white.png"
             alt="큐레이션 카드"
             className="curation-card"
           />
