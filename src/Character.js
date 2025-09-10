@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // 추가
 import "./Character.css";
-import Home from "./home";
+import home from "./home";
 
 const Character = () => {
   const [text, setText] = useState("");
@@ -37,7 +37,7 @@ const Character = () => {
     navigate("/home"); // 버튼 클릭 시 이동
   };
   
-  if (showHome) return <Home />;
+  if (showHome) return <home />;
     
   return (
     <div className="character-container">
@@ -71,17 +71,6 @@ const Character = () => {
         </button>
       )}
     </div>
-  );
-};
-
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Character />} />
-        <Route path="/character" element={<home />} />
-      </Routes>
-    </Router>
   );
 };
 
