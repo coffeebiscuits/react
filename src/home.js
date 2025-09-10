@@ -14,7 +14,7 @@ const Home = () => {
     }, 500);
   };
   
-  const handleCardClose = () => {
+  const handleCloseCard = () => {
     setShowCard(false);
     setIsOpened(false);
   };
