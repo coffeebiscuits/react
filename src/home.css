@@ -147,6 +147,7 @@
   color: black !important;
   margin: 0; /* 기본 마진 제거 */
   flex: 1; /* 남은 공간 차지 */
+  text-shadow: none;  /* ← 그림자 제거 */
 }
 
 .curation-footer {
