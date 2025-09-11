@@ -27,17 +27,9 @@ const Home = () => {
     }, 500);
   };
   
-  // 이벤트 전파 방지 추가
-  const handleCloseCard = (e) => {
-    e.stopPropagation(); // 이벤트 전파 방지
-    e.preventDefault();  // 기본 동작 방지
+  const handleCloseCard = () => {
     setShowCard(false);
     setIsOpened(false);
-  };
-
-  // 카드 영역 클릭 시 이벤트 전파 방지
-  const handleCardClick = (e) => {
-    e.stopPropagation();
   };
 
   return (
@@ -45,7 +37,7 @@ const Home = () => {
       <p>버튼을 눌러 이동 성공!</p>
       
       <img
-        src={isOpened ? "/images/envelope_opened.png" : "/images/envelope_closed.png"}
+        src={isOpened ? "/images/envelope_closed.png" : "/images/envelope_opened.png"}
         alt="편지봉투"
         className="envelope"
         onClick={handleClick}
@@ -54,7 +46,7 @@ const Home = () => {
 
       {/* 큐레이션 카드 */}
       {showCard && curation && (
-        <div className="curation-card" onClick={handleCardClick}>
+        <div className="curation-card">
           <button className="close-card" onClick={handleCloseCard}>
             ×
           </button>
@@ -69,8 +61,8 @@ const Home = () => {
             <p className="curation-content">{curation.content.join(" ")}</p>
             {/* 아래: 날짜 + 링크 */}
             <p className="curation-footer">
-              발행일: {curation.created_at}{" "}
-              <a href={curation.link} target="_blank" rel="noopener noreferrer">바로가기</a>
+              발행일: {curation.created_at} |
+              <a href={curation.link} target="_blank" rel="noopener noreferrer">인스타그램</a>
             </p>
           </div>
         </div>
