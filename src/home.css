@@ -121,10 +121,6 @@
   transform: scale(1.1);
 }
 
-.curation-author-title {
-  font-weight: bold;
-}
-
 .curation-date-link {
   display: flex;
   gap: 10px;
@@ -142,7 +138,6 @@
 .curation-title {
   color: black !important;
   font-size: 1.2rem;
-  font-weight: bold;
   margin: 0; /* 기본 마진 제거 */
 }
 
