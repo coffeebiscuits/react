@@ -139,7 +139,7 @@
 .curation-title {
   color: black !important;
   margin-top: 5px; /* 타이틀 위 간격 설정 */
-  margin-bottom: 8px; /* 타이틀 아래 간격 설정 */
+  margin-bottom: 5px; /* 타이틀 아래 간격 설정 */
 }
 
 .curation-content {
