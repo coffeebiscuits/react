@@ -118,17 +118,6 @@
   transform: scale(1.1);
 }
 
-.curation-content {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.curation-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-}
-
 .curation-author-title {
   font-weight: bold;
 }
@@ -138,30 +127,37 @@
   gap: 10px;
 }
 
+.curation-date {
+  font-size: 0.8rem;
+}
+
 .curation-footer a {
   color: black !important;
   text-decoration: underline;
 }
 
-.curation-date {
-  font-size: 0.8rem;
-}
-
-/* 개별 요소들도 명시적으로 검정색 지정 */
-.curation-author,
-.curation-footer {
+.curation-author {
   color: black !important;
 }
 
-/* 타이틀과 콘텐츠 사이 간격 조정 */
 .curation-title {
   color: black !important;
   margin-bottom: 8px; /* 타이틀 아래 간격 줄임 */
 }
 
 .curation-content {
+  font-size: 1rem;
+  line-height: 1.4;
   color: black !important;
-  margin-top: 0; /* 콘텐츠 위 간격 제거 */
+  margin-top: 2px; /* 콘텐츠 간격 설정 */
+}
+
+.curation-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: black !important;
+  margin-top: 2px; /* 콘텐츠 간격 설정 */
 }
 
 /* 카드 등장 애니메이션 */
