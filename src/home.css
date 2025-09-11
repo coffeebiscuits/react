@@ -93,6 +93,7 @@
   z-index: 12; /* 카드 이미지 위 */
   padding-top: 80px; /* PC에서 로고 아래부터 시작하도록 상단 여백 추가 */
   gap: 15px; /* 요소들 간격 */
+  text-shadow: none !important;
 }
 
 /* 카드 닫기 버튼 - 이제 텍스트 div 안에 있음 */
@@ -139,6 +140,7 @@
   color: black !important;
   font-size: 1.2rem;
   margin: 0; /* 기본 마진 제거 */
+  text-shadow: none !important;
 }
 
 .curation-content {
@@ -147,7 +149,7 @@
   color: black !important;
   margin: 0; /* 기본 마진 제거 */
   flex: 1; /* 남은 공간 차지 */
-  text-shadow: none;  /* ← 그림자 제거 */
+  text-shadow: none !important;  /* ← 그림자 제거 */
 }
 
 .curation-footer {
@@ -157,6 +159,7 @@
   color: black !important;
   margin: 0; /* 기본 마진 제거 */
   width: 100%;
+  text-shadow: none !important;
 }
 
 /* 카드 등장 애니메이션 */
