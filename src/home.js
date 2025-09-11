@@ -37,7 +37,7 @@ const Home = () => {
       <p>버튼을 눌러 이동 성공!</p>
       
       <img
-        src={isOpened ? "/images/envelope_closed.png" : "/images/envelope_opened.png"}
+        src={isOpened ? "/images/envelope_opened.png" : "/images/envelope_closed.png"}
         alt="편지봉투"
         className="envelope"
         onClick={handleClick}
