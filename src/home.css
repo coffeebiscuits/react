@@ -137,6 +137,25 @@
   font-size: 0.8rem;
 }
 
+/* 또는 더 구체적인 선택자 사용 */
+.curation-card .curation-text,
+.curation-card .curation-text p {
+  color: black !important;
+}
+
+/* 개별 요소들도 명시적으로 검정색 지정 */
+.curation-author,
+.curation-title,
+.curation-content,
+.curation-footer {
+  color: black !important;
+}
+
+/* 링크도 검정색으로 */
+.curation-footer a {
+  color: black !important;
+  text-decoration: underline;
+}
 
 /* 카드 등장 애니메이션 */
 @keyframes popUp {
