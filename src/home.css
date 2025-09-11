@@ -196,7 +196,7 @@
   .curation-card {
     width: 90%;      /* 화면 거의 꽉 차게 */
     max-width: 500px; /* 최대값 제한 */
-    height: 80vh;
+    height: 60vh;
     max-height: 600px;
   }
 
