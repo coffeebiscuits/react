@@ -54,12 +54,16 @@ const Home = () => {
           
           {/* 카드 내용 텍스트 */}
           <div className="curation-text">
-            <h2 className="curation-title">{curation.title}</h2>
+            {/* 위: 작가 + 제목 */}
+            <p className="curation-author">{curation.author}</p>
+            <p className="curation-title">{curation.title}</p>
+            {/* 중: 내용 */}
             <p className="curation-content">{curation.content.join(" ")}</p>
-            <p className="curation-author">
-              작가: <a href={curation.link} target="_blank" rel="noopener noreferrer">{curation.author}</a>
+            {/* 아래: 날짜 + 링크 */}
+            <p className="curation-footer">
+              발행일: {curation.created_at} |
+              <a href={curation.link} target="_blank" rel="noopener noreferrer">인스타그램</a>
             </p>
-            <p className="curation-date">Created at: {curation.created_at}</p>
           </div>
         </div>
       )}
