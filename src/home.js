@@ -54,15 +54,13 @@ const Home = () => {
             <button className="close-card" onClick={handleCloseCard}>
               ×
             </button>
-            
-            {/* 위: 작가 + 제목 */}
-            <p className="curation-author">{curation.author}</p>
+            {/* 위: 제목 */}
             <p className="curation-title">{curation.title}</p>
             {/* 중: 내용 */}
             <p className="curation-content">{curation.content.join(" ")}</p>
             {/* 아래: 날짜 + 링크 */}
             <p className="curation-footer">
-              발행일: {curation.created_at} |{" "}
+              발행일: {curation.created_at} {" "}
               <a href={curation.link} target="_blank" rel="noopener noreferrer">인스타그램</a>
             </p>
           </div>
