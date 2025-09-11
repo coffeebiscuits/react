@@ -47,13 +47,14 @@ const Home = () => {
       {/* 큐레이션 카드 */}
       {showCard && curation && (
         <div className="curation-card">
-          <button className="close-card" onClick={handleCloseCard}>
-            ×
-          </button>
           <img src="/images/curation_card_white.png" alt="큐레이션 카드" />
           
-          {/* 카드 내용 텍스트 */}
+          {/* 카드 내용 텍스트 - 닫기 버튼도 여기 안에 포함 */}
           <div className="curation-text">
+            <button className="close-card" onClick={handleCloseCard}>
+              ×
+            </button>
+            
             {/* 위: 작가 + 제목 */}
             <p className="curation-author">{curation.author}</p>
             <p className="curation-title">{curation.title}</p>
@@ -61,7 +62,7 @@ const Home = () => {
             <p className="curation-content">{curation.content.join(" ")}</p>
             {/* 아래: 날짜 + 링크 */}
             <p className="curation-footer">
-              발행일: {curation.created_at} |
+              발행일: {curation.created_at} |{" "}
               <a href={curation.link} target="_blank" rel="noopener noreferrer">인스타그램</a>
             </p>
           </div>
