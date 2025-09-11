@@ -200,7 +200,7 @@
 
   /* 모바일에서 텍스트 크기와 간격 조정 */
   .curation-text {
-    padding: 15px; /* 패딩 줄임 */
+    padding: 10px; /* 패딩 */
     padding-top: 60px; /* 모바일에서는 상단 여백 줄임 */
     justify-content: space-between; /* 모바일에서는 분산 배치 */
     gap: 8px; /* 모바일에서는 간격 줄임 */
