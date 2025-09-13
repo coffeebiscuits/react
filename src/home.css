@@ -14,30 +14,30 @@
   background-size: cover; /* 화면 가득 채우기 */ 
   background-position: center; 
   background-repeat: no-repeat; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white; /* 텍스트 색상 추가 */
 }
 
-.home-container h1 {
-  font-family: 'Yanolja', sans-serif;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 텍스트 가독성 향상 */
-}
-
-.home-container p {
+/* 안내문구 (이미지 위쪽) */
+.guide-text {
+  position: absolute;
+  top: 20%; /* 화면 상단에서 20% 정도 */
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Yanolja', sans-serif;
   font-size: 1.4rem;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 0;
 }
 
+/* 편지봉투 이미지 (화면 정중앙) */
 .envelope {
-  width: 300px;  /* 원하는 크기 */
-  height: auto;  /* 비율 유지 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: auto;
+  cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -179,15 +179,11 @@
 
 /* 모바일 대응 */
 @media (max-width: 768px) {
-  .home-container h1 {
-    font-size: 2rem;
-  }
-  
-  .home-container p {
+  .guide-text {
+    top: 15%;
     font-size: 1.2rem;
     text-align: center;
     padding: 0 20px;
-  }
 
   .envelope {
     width: 200px;
