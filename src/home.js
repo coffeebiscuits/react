@@ -6,6 +6,7 @@ const Home = () => {
   const [showCard, setShowCard] = useState(false); // 카드 표시 상태
   const [curation, setCuration] = useState(null);
   const [isMobile, setIsMobile] = useState(false); // 모바일 여부 상태
+  const [isNewCard, setIsNewCard] = useState(false); // 새로운 카드 여부 상태
 
   // 화면 크기 감지
   useEffect(() => {
@@ -31,7 +32,14 @@ const Home = () => {
       .then((data) => {
         const today = new Date().toISOString().split("T")[0];
         const todayData = data.find((item) => item.created_at === today);
-        setCuration(todayData || data[data.length - 1]);
+        
+        if (todayData) {
+          setCuration(todayData);
+          setIsNewCard(true); // 오늘 날짜의 카드가 있으면 새로운 카드
+        } else {
+          setCuration(data[data.length - 1]);
+          setIsNewCard(false); // 오늘 날짜의 카드가 없으면 기본 상태
+        }
       });
   }, []);
 
@@ -49,9 +57,22 @@ const Home = () => {
     setIsOpened(false);
   };
 
+  // 메시지 생성 함수
+  const getDisplayMessage = () => {
+    if (isMobile) {
+      return isNewCard 
+        ? "새로운 큐레이션 카드가 도착했어요. 아래 편지를 눌러보세요."
+        : "아래 편지를 누르고, 큐레이션 카드를 확인해보세요.";
+    } else {
+      return isNewCard 
+        ? "새로운 큐레이션 카드가 도착했어요. 아래 편지를 클릭해보세요."
+        : "아래 편지를 클릭하고 큐레이션 카드를 확인해보세요.";
+    }
+  };
+
   return (
     <div className="home-container">
-      <p>버튼을 눌러 이동 성공!</p>
+      <p>{getDisplayMessage()}</p>
       
       <img
         src={isOpened ? "/images/envelope_opened.png" : "/images/envelope_closed.png"}
