@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <p className="guide-text">버튼을 눌러 이동 성공!</p>
+      <p>버튼을 눌러 이동 성공!</p>
       
       <img
         src={isOpened ? "/images/envelope_opened.png" : "/images/envelope_closed.png"}
